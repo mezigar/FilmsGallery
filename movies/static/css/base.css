@@ -1,0 +1,40 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+
+header h1 a {
+    color: red;
+    text-decoration: none;
+}
+
+
+.film-entry {
+    margin-bottom: 2rem;
+}
+
+.film-entry h2 {
+    margin: 0.5rem 0;
+}
+
+.film-entry h2 a,
+.film-entry h2 a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.film-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.film-entry h2 a:hover {
+    color:red;
+}
