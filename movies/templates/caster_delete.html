@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Delete caster</h1>
+
+<form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object.first_name }}  {{ object.last_name }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
+{% endblock content %}

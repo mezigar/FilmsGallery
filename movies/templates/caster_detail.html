@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='film-entry'>
+    <h2>{{ object.first_name }} {{ object.last_name }}</h2>
+    <p>{{ object.role }}</p>
+</div>
+<h4>Фильмография</h4>
+    {% for film in caster.movies.all %}
+    <p>{{ film.title }}</p>
+    <p>{{ film.description}}</p>
+    <hr>
+    {% endfor %}
+    <p><a href="{% url 'caster_edit' object.pk %}">+ Edit Caster</a></p>
+    <p><a href="{% url 'caster_delete' object.pk %}">+ Delete Caster</a></p>
+{% endblock content %}
+

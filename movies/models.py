@@ -9,6 +9,9 @@ class Movie(models.Model):
     # director = models.CharField(max_length=50)
     description = models.TextField()
 
+    class Meta:
+        ordering = ['title']
+
     def __str__(self):
         return self.title
 
@@ -16,12 +19,4 @@ class Movie(models.Model):
         return reverse("movie_detail", args=[str(self.id)])
     
 
-class Caster(models.Model):
-    first_name = models.CharField(max_length=25)
-    last_name = models.CharField(max_length=25)
-    role = models.CharField(max_length=30)
-    movies = models.ManyToManyField(Movie)
-
-    def __str__(self):
-        return self.first_name + self.last_name
 

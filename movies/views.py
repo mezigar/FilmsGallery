@@ -1,5 +1,3 @@
-from dataclasses import fields
-from re import template
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
